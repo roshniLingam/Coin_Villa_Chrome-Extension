@@ -1,0 +1,17 @@
+{
+    "name": "Coin Villa",
+    "description": "An extension to keep track of changes in cryptocurrency market.",
+    "version": "0.0.0.1",
+    "manifest_version": 3,
+    "action":{
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions":[
+        "tabs",
+        "activeTab"
+    ]
+}

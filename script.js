@@ -1,18 +1,13 @@
 // a global map to store the data {coin: price}
 const map = new Map();
+import options from './key.js';
+console.log(options)
 
 // a function to get data
 async function getData(){
-    // a secret key to access the api
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'b205929acfmshb44094a9e5bda8cp1ceabdjsneb70c8d510c7',
-            'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com'
-        }
-    };
- 
+    // options is a secret key to access the api
     let price;
+    let response;
     
     /* fetching data of BTC and addind it to map*/
     response= await fetch('https://alpha-vantage.p.rapidapi.com/query?from_currency=BTC&function=CURRENCY_EXCHANGE_RATE&to_currency=USD', options);
